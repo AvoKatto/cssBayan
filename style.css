@@ -1,0 +1,61 @@
+.body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.hed {
+    padding-left: 500px;
+    padding-top: 100px;
+}
+.mem {
+    cursor: pointer;
+}
+
+input {
+    visibility: hidden;
+    display: none;
+}
+
+.mem-name {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 500px;
+    border-top: 20px solid #c76edd;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.close {
+    opacity: 0;
+    font-size: 2.2em;
+}
+
+main:hover .close {
+    opacity: 1;
+    transition: 1.6s;
+}
+
+.mem-image {
+    padding-left: 350px;
+    max-height: 0;
+    opacity: 0;
+}
+
+.mem:hover .mem-image {
+    opacity: 1;
+    max-height: 45em;
+    transform: scale(1);
+    transition: 1.4s;
+}
+
+.mem input:checked ~ .mem-image {
+    max-height: 50em;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.mem input:checked ~ .mem-name .close {
+    transform: rotate(0.5turn);
+    opacity: 1;
+    transition: 0.5s;
+}
